@@ -1,0 +1,28 @@
+.imgStyle {
+  width: 40%;
+  border-radius: 10%;
+  margin: 3em;
+}
+.Game-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+
+.Game-details-container {
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.screen {
+  justify-content: end;
+}
+
+.Erase-btn {
+  width: 7vw;
+  height: 3vh;
+  font-weight: bold;
+}
