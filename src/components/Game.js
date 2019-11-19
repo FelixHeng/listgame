@@ -30,7 +30,7 @@ const Game = props => {
             props.remove(props.index);
           }}
         />
-        <diV>
+        <div>
           <Link
             to={`/jeu/screenshots/${props.data.id}`}
             index={props.data.id}
@@ -38,7 +38,7 @@ const Game = props => {
           >
             Screen
           </Link>
-        </diV>
+        </div>
       </div>
     </div>
   );

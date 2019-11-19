@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./Screenshot.css";
 
@@ -23,7 +24,12 @@ class Screenshot extends Component {
   render() {
     console.log("paraaaaam", this.props.match.params.id);
     return (
-      <div>
+      <div className="screenshot-container">
+        <div>
+          <button className="home-btn">
+            <Link to={"/"}>Home</Link>
+          </button>
+        </div>
         {this.state.screenshot.map(firstArray => {
           console.log(firstArray);
           console.log("id du jeu", firstArray.id);

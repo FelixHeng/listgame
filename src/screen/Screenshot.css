@@ -1,3 +1,16 @@
+.screenshot-container {
+  text-align: center;
+}
+
 .screenshot {
   width: 50%;
+  margin: 10px;
+}
+.home-btn {
+  width: 20vw;
+  height: 10vh;
+  margin: 30px 0 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 15px;
 }
