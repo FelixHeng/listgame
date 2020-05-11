@@ -1,27 +1,27 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Game from "./Game";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Game from '../Game/Game';
 
-import "./GameList.css";
+import './GameList.css';
 
 class GameList extends Component {
   state = {
     games: [],
-    value: "Best Games",
-    change: false
+    value: 'Best Games',
+    change: false,
   };
 
   getGames = () => {
     axios
-      .get("https://wild-games.herokuapp.com/api/v1")
-      .then(response => this.setState({ games: response.data }));
+      .get('https://wild-games.herokuapp.com/api/v1')
+      .then((response) => this.setState({ games: response.data }));
   };
 
   componentDidMount() {
     this.getGames();
   }
 
-  handleDelete = indexStart => {
+  handleDelete = (indexStart) => {
     const newGames = this.state.games;
     newGames.splice(indexStart, 1);
     this.setState({ games: newGames });
@@ -30,9 +30,9 @@ class GameList extends Component {
   handleBest = () => {
     this.setState({ change: !this.state.change });
     this.state.change === false
-      ? this.setState({ value: "All Games" })
+      ? this.setState({ value: 'All Games' })
       : this.setState({
-          value: "Best Games"
+          value: 'Best Games',
         });
   };
 
@@ -47,14 +47,15 @@ class GameList extends Component {
           onClick={this.handleBest}
         />
         {this.state.games
-          .filter(rat =>
+          .filter((rat) =>
             this.state.change ? rat.rating >= 4.5 : this.state.games
           )
           .map((game, id) => {
-            console.log(this.state.games, "ececece");
+            console.log(this.state.games, 'ececece');
             return (
               <div>
-                <Game data={game} remove={this.handleDelete} index={id} />
+                CECI EST UN JEU
+                <Game popo={game} remove={this.handleDelete} index={id} />
               </div>
             );
           })}
