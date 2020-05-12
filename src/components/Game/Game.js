@@ -11,7 +11,7 @@ const Game = (props) => {
         alt={props.popo.name}
       />
       <div className="Game-details-container">
-        <h1>{props.popo.name}</h1>
+        <h3>{props.popo.name}</h3>
         <div>
           Genre :
           {props.popo.genres.map((genre) => {

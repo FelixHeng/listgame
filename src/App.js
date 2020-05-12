@@ -6,12 +6,14 @@ import Screenshot from './pages/Screenshot';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={GameList} />
-        <Route path="/jeu/screenshots/:id" component={Screenshot} />
-      </Switch>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={GameList} />
+          <Route path="/jeu/screenshots/:id" component={Screenshot} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,14 +1,24 @@
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 .btn-handleBest {
-  width: 20vw;
-  height: 10vh;
-  margin-bottom: 30px;
-  font-size: 1.5em;
+  width: 15vw;
+  height: 7vh;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
   font-weight: bold;
   border-radius: 15px;
+  justify-content: center;
 }
 
 .gamelist-container {
   text-align: center;
   font-weight: bold;
   margin: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

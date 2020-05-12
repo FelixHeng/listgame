@@ -39,26 +39,30 @@ class GameList extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="gamelist-container">
-        <input
-          className="btn-handleBest"
-          type="button"
-          value={this.state.value}
-          onClick={this.handleBest}
-        />
-        {this.state.games
-          .filter((rat) =>
-            this.state.change ? rat.rating >= 4.5 : this.state.games
-          )
-          .map((game, id) => {
-            console.log(this.state.games, 'ececece');
-            return (
-              <div>
-                CECI EST UN JEU
-                <Game popo={game} remove={this.handleDelete} index={id} />
-              </div>
-            );
-          })}
+      <div className="page-container">
+        <div className="btn">
+          <input
+            className="btn-handleBest"
+            type="button"
+            value={this.state.value}
+            onClick={this.handleBest}
+          />
+        </div>
+        <div className="gamelist-container">
+          {this.state.games
+            .filter((rat) =>
+              this.state.change ? rat.rating >= 4.5 : this.state.games
+            )
+            .map((game, id) => {
+              console.log(this.state.games, 'ececece');
+              return (
+                <div>
+                  CECI EST UN JEU
+                  <Game popo={game} remove={this.handleDelete} index={id} />
+                </div>
+              );
+            })}
+        </div>
       </div>
     );
   }
